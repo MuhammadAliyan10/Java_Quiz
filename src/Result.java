@@ -83,7 +83,7 @@ public class Result extends JFrame implements ActionListener {
         // ! Report
 
         JLabel report = new JLabel("The user " + name + " has got " + score + " numbers from 100 numbers.");
-        report.setBounds(600, 390, 400, 45);
+        report.setBounds(600, 390, 700, 45);
         report.setFont(new Font(Font.SANS_SERIF, Font.LAYOUT_LEFT_TO_RIGHT, 16));
         report.setForeground(Color.RED);
         add(report);
@@ -117,6 +117,7 @@ public class Result extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == playAgain) {
             new Login();
+            setVisible(false);
 
         } else if (e.getSource() == exit) {
             setVisible(false);
